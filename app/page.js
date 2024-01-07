@@ -7,11 +7,11 @@ export default function Home() {
   const [input, setInput] = useState('');
   useEffect(() => {
     socketInitializer();
-  });
+  }, []);
 
   const socketInitializer = async () => {
     await fetch('/api/socket', { cache: 'no-cache' });
-    socket = io();
+    socket = io( undefined, {path: '/api/socket_io'});
 
     socket.on('connect', () => {
       console.log('connected');
