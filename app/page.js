@@ -17,6 +17,7 @@ export default function Home() {
       console.log('connected');
     });
 
+    
     socket.on('update-input', (msg) => {
       setInput(msg);
     });
