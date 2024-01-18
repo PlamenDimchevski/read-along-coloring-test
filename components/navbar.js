@@ -5,9 +5,8 @@ import NavItem from "./navite";
 
 const paths = [
   { name: "Add text", href: "/form" },
-  { name: "Read avaliable", href: "/" },
+  { name: "Read avaliable", href: "/read" },
   { name: "Help", href: "/hello" },
-  { name: "About", href: "/hello" },
 ];
 
 export default function NavBar() {
