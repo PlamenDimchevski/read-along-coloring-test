@@ -1,4 +1,5 @@
 import config from "@/config";
+import Link from "next/link";
 export default function Home() {
   return (
     <main>
@@ -38,12 +39,7 @@ export default function Home() {
               >
                 Get started
               </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white"
-              >
-                Join the book club <span aria-hidden="true">→</span>
-              </a>
+              <Link href="/read" className="text-sm font-semibold leading-6 text-white" >Join the book club <span aria-hidden="true">→</span></Link>
             </div>
           </div>
           <div className="relative mt-16 h-80 lg:mt-8"></div>
