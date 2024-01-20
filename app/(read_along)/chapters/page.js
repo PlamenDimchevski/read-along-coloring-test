@@ -41,6 +41,9 @@ export default function List() {
                      <Link href="/chapters/1" className="btn btn-ghost btn-xs">
                         edit
                      </Link>
+                     <Link href="/chapters/read/1" className="btn btn-ghost btn-xs">
+                        read
+                     </Link>
                      <button className="btn btn-ghost btn-xs">delete</button>
                   </th>
                </tr>
