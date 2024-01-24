@@ -16,7 +16,7 @@ export default function Example() {
       <div className="overflow-x-auto">
          <dialog ref={modalAdd} id="my_modal_2" className="modal">
             <div className="modal-box">
-               <h3 className="font-bold text-lg">Add character!</h3>
+               <h3 className="text-lg font-bold">Add character!</h3>
                <label className="form-control w-full max-w-xs">
                   <div className="label">
                      <span className="label-text">Character name</span>
@@ -49,7 +49,7 @@ export default function Example() {
          </dialog>
          <dialog ref={modal} id="my_modal_1" className="modal">
             <div className="modal-box">
-               <h3 className="font-bold text-lg">Hello!</h3>
+               <h3 className="text-lg font-bold">Hello!</h3>
                <p className="py-4">Press ESC key or click the button below to close</p>
                <div className="modal-action">
                   <form method="dialog">
@@ -78,7 +78,7 @@ export default function Example() {
                   <td>
                      <div className="flex items-center gap-3">
                         <div className="avatar">
-                           <div className="mask mask-squircle w-12 h-12">
+                           <div className="mask mask-squircle h-12 w-12">
                               <UserCircleIcon />
                            </div>
                         </div>
@@ -103,7 +103,7 @@ export default function Example() {
                   <td>
                      <div className="flex items-center gap-3">
                         <div className="avatar">
-                           <div className="mask mask-squircle w-12 h-12">
+                           <div className="mask mask-squircle h-12 w-12">
                               <UserCircleIcon />
                            </div>
                         </div>
@@ -128,7 +128,7 @@ export default function Example() {
                   <td>
                      <div className="flex items-center gap-3">
                         <div className="avatar">
-                           <div className="mask mask-squircle w-12 h-12">
+                           <div className="mask mask-squircle h-12 w-12">
                               <UserCircleIcon />
                            </div>
                         </div>
@@ -152,7 +152,7 @@ export default function Example() {
                   <td>
                      <div className="flex items-center gap-3">
                         <div className="avatar">
-                           <div className="mask mask-squircle w-12 h-12">
+                           <div className="mask mask-squircle h-12 w-12">
                               <UserCircleIcon />
                            </div>
                         </div>

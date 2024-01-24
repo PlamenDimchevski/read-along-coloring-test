@@ -8,9 +8,9 @@ export default function DemoText() {
             their leave, and everything was ready for our departure. Hannelore and I climbed into our carriage with our
             respective guard knights.
          </p>
-         <p className="bg-warning text-warning-content indicator w-auto">
-            <button className="indicator-item badge badge-secondary px-0">
-               <XMarkIcon className="w-4 h-4" />
+         <p className="indicator w-auto bg-warning text-warning-content">
+            <button className="badge indicator-item badge-secondary px-0">
+               <XMarkIcon className="h-4 w-4" />
             </button>
             &quot;So, how should we convince Lord Ferdinand to agree to this political marriage?&quot; Hannelore asked
             with a straight face. &quot;My knowledge of the man comes entirely from the tales Heisshitze and the others

@@ -9,7 +9,7 @@ const links = [
    { href: '/help', title: 'Help' },
 ];
 
-export default function Header() {
+export default function Heading() {
    const pathName = usePathname();
    return (
       <div className="navbar bg-base-100">
@@ -20,7 +20,7 @@ export default function Header() {
                </div>
                <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  className="dropdown-content menu menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                >
                   {links.map(item => (
                      <li key={item.href}>

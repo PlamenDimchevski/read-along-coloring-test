@@ -4,7 +4,7 @@ export default function List() {
    return (
       <div className="overflow-x-auto">
          <div className="join flex w-full">
-            <input className="input input-bordered join-item flex-grow" placeholder="Search for chapter" />
+            <input className="input join-item input-bordered flex-grow" placeholder="Search for chapter" />
             <button className="btn join-item">Search</button>
             <Link href="/chapters/add" className="btn join-item">
                Add new

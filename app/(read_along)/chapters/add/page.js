@@ -24,7 +24,7 @@ export default function List() {
             </label>
             <div className="flex justify-between pt-4">
                <button className="btn btn-wide">Cancel</button>
-               <button className="btn btn-wide btn-info">Proceed</button>
+               <button className="btn btn-info btn-wide">Proceed</button>
             </div>
          </form>
       </div>
