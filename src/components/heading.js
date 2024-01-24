@@ -7,6 +7,7 @@ const links = [
    { href: '/chapters', title: 'Chapters' },
    { href: '/characters', title: 'Characters' },
    { href: '/help', title: 'Help' },
+   { href: '/api/auth/signout', title: 'LogOut' },
 ];
 
 export default function Heading() {
@@ -20,7 +21,7 @@ export default function Heading() {
                </div>
                <ul
                   tabIndex={0}
-                  className="dropdown-content menu menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                >
                   {links.map(item => (
                      <li key={item.href}>
