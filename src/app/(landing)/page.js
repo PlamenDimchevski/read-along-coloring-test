@@ -38,6 +38,7 @@ export default function Home() {
                      >
                         Get started
                      </Link>
+                     <span className="hidden">{process.env.NEXTAUTH_SECRET}</span>
                      {/* <Link href="/read" className="text-sm font-semibold leading-6 text-white">
                         Join the book club <span aria-hidden="true">→</span>
                      </Link> */}
