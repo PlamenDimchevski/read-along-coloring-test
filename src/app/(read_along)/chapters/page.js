@@ -5,6 +5,7 @@ import Link from 'next/link';
 export default async function List() {
    const session = await getServerSession(options);
    console.log(' --------- ', session);
+
    return (
       <div className="overflow-x-auto">
          <div className="join flex w-full">

@@ -1,6 +1,10 @@
-import config from '@/config';
+import { options } from '@/src/app/api/auth/[...nextauth]/options';
+import { getServerSession } from 'next-auth/next';
 import Link from 'next/link';
-export default function Home() {
+export default async function Home() {
+   const session = await getServerSession(options);
+   console.log(' --------- ', session);
+
    return (
       <main>
          <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">

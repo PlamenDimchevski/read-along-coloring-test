@@ -1,9 +1,8 @@
-const { NODE_ENV, clientId, clientSecret, generatedURL, ALLOWED_CHANEL_ID } = process.env;
+const { NODE_ENV, DISCORD_CLIENT_SECRET, ALLOWED_CHANEL_ID, DISCORD_CLIENT_ID } = process.env;
 
 export default {
    NODE_ENV,
-   clientId,
-   clientSecret,
-   generatedURL,
    ALLOWED_CHANEL_ID,
+   DISCORD_CLIENT_ID,
+   DISCORD_CLIENT_SECRET,
 };

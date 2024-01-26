@@ -2,12 +2,20 @@
 import { Bars3CenterLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 
 const links = [
    { href: '/chapters', title: 'Chapters' },
    { href: '/characters', title: 'Characters' },
    { href: '/help', title: 'Help' },
-   { href: '/api/auth/signout', title: 'LogOut' },
+   {
+      href: '#',
+      title: 'Sign Out',
+      onClick: e => {
+         e.preventDefault();
+         signOut({ callbackUrl: '/', redirect: true });
+      },
+   },
 ];
 
 export default function Heading() {
@@ -25,7 +33,11 @@ export default function Heading() {
                >
                   {links.map(item => (
                      <li key={item.href}>
-                        <a className={pathName.startsWith(item.href) ? 'active' : ''} href={item.href}>
+                        <a
+                           className={pathName.startsWith(item.href) ? 'active' : ''}
+                           href={item.href}
+                           onClick={item.onClick}
+                        >
                            {item.title}
                         </a>
                      </li>
@@ -40,7 +52,11 @@ export default function Heading() {
             <ul className="menu menu-horizontal px-1">
                {links.map(item => (
                   <li key={item.href}>
-                     <a className={pathName.startsWith(item.href) ? 'active' : ''} href={item.href}>
+                     <a
+                        className={pathName.startsWith(item.href) ? 'active' : ''}
+                        href={item.href}
+                        onClick={item.onClick}
+                     >
                         {item.title}
                      </a>
                   </li>
