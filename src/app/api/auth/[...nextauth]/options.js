@@ -54,8 +54,7 @@ export const options = {
 
          const requiredChanel = channelsData.find(item => item.id == config.ALLOWED_CHANEL_ID);
 
-         return false;
-         //  return requiredChanel?.id === config.ALLOWED_CHANEL_ID;
+         return requiredChanel?.id === config.ALLOWED_CHANEL_ID;
       },
    },
 };
