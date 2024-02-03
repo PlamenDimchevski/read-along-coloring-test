@@ -1,14 +1,14 @@
 import { UserCircleIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 
-function CharacterImage({ imageUrl, name }: { imageUrl: string | null; name: string }) {
+function CharacterImage({ imageUrl, name }: { imageUrl?: string | null; name: string }) {
    if (!imageUrl) {
       return <UserCircleIcon />;
    }
    return <img src={imageUrl} alt={`${name} icon`} />;
 }
 
-function Description({ description }: { description: string }) {
+function Description({ description }: { description?: string }) {
    if (!description) {
       return null;
    }
@@ -25,9 +25,9 @@ export default function TableRow({
 }: {
    id: string;
    name: string;
-   description: string;
-   imageUrl: string | null;
    color: string;
+   description?: string;
+   imageUrl?: string | null;
 }) {
    return (
       <tr>

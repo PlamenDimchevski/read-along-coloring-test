@@ -1,9 +1,9 @@
 import { Knex } from 'knex';
-import { POSTGRES_URL } from './config';
+import { POSTGRES_PRISMA_URL } from './config';
 
 const config: Knex.Config = {
    client: 'pg',
-   connection: POSTGRES_URL,
+   connection: POSTGRES_PRISMA_URL,
    migrations: {
       extension: 'ts',
    },

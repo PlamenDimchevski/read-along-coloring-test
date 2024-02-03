@@ -81,7 +81,7 @@ export function EditItem({ id, character }: { id?: string; character?: Character
                placeholder="description"
                name="description"
                className="input input-bordered w-full max-w-xs"
-               defaultValue={character?.description}
+               defaultValue={character?.description || ''}
             />
             <div className="label">
                <span className="label-text-alt">Can be used for full name or epitets</span>

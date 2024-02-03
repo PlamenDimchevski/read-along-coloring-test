@@ -41,7 +41,7 @@ export default async function Example({ searchParams }: { searchParams: SearchPa
                      key={item.id}
                      id={item.id}
                      name={item.name}
-                     description={item.description}
+                     description={item.description || ''}
                      imageUrl={item.imageUrl}
                      color={item.color}
                   />
