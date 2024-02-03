@@ -1,10 +1,10 @@
+import { NODE_ENV } from '@/config';
 import { options } from '@/src/app/api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next';
 import Link from 'next/link';
 
 export default async function List() {
    const session = await getServerSession(options);
-   console.log(' --------- ', session);
 
    return (
       <div className="overflow-x-auto">

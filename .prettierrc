@@ -8,6 +8,7 @@
    "endOfLine": "lf",
    "arrowParens": "avoid",
    "plugins": [
-      "prettier-plugin-tailwindcss"
+      "prettier-plugin-tailwindcss",
+      "@babel/plugin-syntax-dynamic-import"
    ]
 }

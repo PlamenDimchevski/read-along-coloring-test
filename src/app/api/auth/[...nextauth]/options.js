@@ -1,12 +1,12 @@
 import DiscordProvider from 'next-auth/providers/discord';
 
-import config from '@/config';
+import { DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET } from '@/config';
 
 export const options = {
    providers: [
       DiscordProvider({
-         clientId: config.DISCORD_CLIENT_ID,
-         clientSecret: config.DISCORD_CLIENT_SECRET,
+         clientId: DISCORD_CLIENT_ID,
+         clientSecret: DISCORD_CLIENT_SECRET,
          authorization: {
             url: 'https://discord.com/api/oauth2/authorize',
             params: { scope: 'identify guilds' },
