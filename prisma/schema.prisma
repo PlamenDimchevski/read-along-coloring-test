@@ -22,6 +22,7 @@ model Character {
   description String?
   color       String
   imageUrl    String?
+  chapters    Chapter[]
 
   @@unique([id])
   @@index([name, id])
@@ -37,9 +38,17 @@ model Chapter {
   book       String   @default("AOAB")
   part       Int      @default(5)
   prepub     Boolean  @default(true)
-  characters Json?
+  status     Status   @default(OPEN)
+  aiProcessed Boolean @default(false)
+  characters Character[]    
 
   @@unique([id])
   @@index([createdAt])
   @@map("chapters")
+}
+
+enum Status {
+  OPEN
+  READING
+  READ
 }
