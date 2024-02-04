@@ -1,11 +1,12 @@
 import { UserCircleIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import Link from 'next/link';
 
 function CharacterImage({ imageUrl, name }: { imageUrl?: string | null; name: string }) {
    if (!imageUrl) {
       return <UserCircleIcon />;
    }
-   return <img src={imageUrl} alt={`${name} icon`} />;
+   return <Image src={imageUrl} alt={`${name} icon`} />;
 }
 
 function Description({ description }: { description?: string }) {

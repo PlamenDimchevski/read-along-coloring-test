@@ -24,7 +24,7 @@ export default async function List() {
             <tbody>
                {/* row 1 */}
                {chapter.map(item => (
-                  <tr>
+                  <tr key={item.id}>
                      <td>
                         <div className="flex items-center gap-3">
                            <div>
