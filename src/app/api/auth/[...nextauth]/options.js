@@ -1,6 +1,6 @@
 import DiscordProvider from 'next-auth/providers/discord';
 
-import { DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET } from '@/config';
+import { DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET, ALLOWED_CHANEL_ID } from '@/config';
 
 export const options = {
    providers: [
@@ -51,10 +51,9 @@ export const options = {
          })
             .then(res => res.json())
             .catch(() => []);
+         const requiredChanel = channelsData.find(item => item.id == ALLOWED_CHANEL_ID);
 
-         const requiredChanel = channelsData.find(item => item.id == config.ALLOWED_CHANEL_ID);
-
-         return requiredChanel?.id === config.ALLOWED_CHANEL_ID;
+         return requiredChanel?.id === ALLOWED_CHANEL_ID;
       },
    },
 };
