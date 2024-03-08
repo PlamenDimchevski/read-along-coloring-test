@@ -1,6 +1,8 @@
 'use server';
 import db from '@/src/lib/db';
 import sanitizeHtml from 'sanitize-html';
+import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 
 interface Chapters {
    title: string;
@@ -39,5 +41,7 @@ export async function parsContent(prevState: any, formData: FormData): Promise<C
    const contentData: any = formData.get('content');
    const chapters = processContent(contentData);
    await db.chapter.createMany({ data: chapters });
+   revalidatePath('/chapters');
+   redirect('/chapters');
    return { html: '' };
 }

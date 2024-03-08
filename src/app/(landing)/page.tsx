@@ -1,9 +1,8 @@
-import { options } from '@/src/app/api/auth/[...nextauth]/options';
-import { getServerSession } from 'next-auth/next';
+// import { options } from '@/src/app/api/auth/[...nextauth]/options';
+// import { getServerSession } from 'next-auth/next';
 import Link from 'next/link';
 export default async function Home() {
-   const session = await getServerSession(options);
-   console.log(' --------- ', session);
+   // const session = await getServerSession(options);
 
    return (
       <main>
