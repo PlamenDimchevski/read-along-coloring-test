@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 import OpenAI from 'openai';
 import { OPENAI_API_KEY } from '@/config';
 
-import demoLines from './demo';
+// import demoLines from './demo';
 
 interface Batches {
    content: string;
