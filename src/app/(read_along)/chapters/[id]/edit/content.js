@@ -2,11 +2,9 @@
 
 import { useRef } from 'react';
 
-type TODO = any | undefined;
-
-export default function ContentEditing({ content }: { content: string }) {
-   const area: TODO = useRef(null);
-   function onEdit(e: TODO) {
+export default function ContentEditing({ content }) {
+   const area = useRef(null);
+   function onEdit(e) {
       e.preventDefault();
       //   console.log(area.current);
       var selection = window?.getSelection().getRangeAt(0);
@@ -17,8 +15,8 @@ export default function ContentEditing({ content }: { content: string }) {
       selection.insertNode(span);
    }
 
-   function extendSelection(e: TODO) {
-      let selection: TODO = window.getSelection();
+   function extendSelection(e) {
+      let selection = window.getSelection();
       selection.modify('move', 'backward', 'Sentence');
       selection.modify('extend', 'forward', 'Sentence');
    }
